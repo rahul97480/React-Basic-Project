@@ -2,18 +2,19 @@ import { Switch, Route, Redirect } from 'react-router';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle"
 import './App.css';
-import Github from './Github'
+//import Github from './Github'
 import Home from './Home'
 import Service from './Service'
 import About from './About'
 import Contact from './Contact'
-import Navbar from './Navbar'
+//import Navbar from './Navbar'
+import DigitalClock from './DigitalClock'
 
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/*<Navbar />*/}
       <Switch>
         <Route exact path="/" component ={Home}/>
         <Route exact path="/contact" component ={Contact}/>
@@ -22,8 +23,9 @@ function App() {
         <Redirect to="/" ></Redirect>
         <Home />
       </Switch>
+      <DigitalClock />
      
-      <Github />
+      {/*<Github />*/}
     </div>
   );
 }
